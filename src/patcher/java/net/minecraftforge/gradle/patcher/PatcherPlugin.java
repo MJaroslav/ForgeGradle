@@ -118,6 +118,7 @@ public class PatcherPlugin implements Plugin<Project> {
         TaskProvider<DefaultTask> release = project.getTasks().register("release", DefaultTask.class);
 
         //Add Known repos
+        project.getRepositories().maven(e -> e.setUrl(Utils.SCIWHIZ_MAVEN));
         project.getRepositories().maven(e -> {
             e.setUrl(Utils.FORGE_MAVEN);
         });

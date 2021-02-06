@@ -257,6 +257,7 @@ public class UserDevPlugin implements Plugin<Project> {
                 minecraft.getDependencies().add(ext);
             }
 
+            project.getRepositories().maven(e -> e.setUrl(Utils.SCIWHIZ_MAVEN));
             project.getRepositories().maven(e -> {
                 e.setUrl(Utils.FORGE_MAVEN);
             });
